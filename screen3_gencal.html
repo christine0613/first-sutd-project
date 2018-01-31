@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>My Project__draft</title>
+  <link rel="stylesheet" href="./font-awesome-4.7.0/css/font-awesome.css">
+  <link rel="stylesheet" type="text/css" href="draft_screen3_gencal.css">
+  <link href="https://fonts.googleapis.com/css?family=Lato|Roboto+Condensed" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Noto+Sans" rel="stylesheet">
+  <link rel='stylesheet' href='./fullcalendar/fullcalendar.css' />
+  <script src='./fullcalendar/lib/jquery.min.js'></script>
+  <script src='./fullcalendar/lib/moment.min.js'></script>
+  <script src='./fullcalendar/fullcalendar.js'></script>
+  <!-- Latest compiled and minified CSS -->
+  <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"> -->
+
+<!-- Optional theme -->
+  <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous"> -->
+
+<!-- Latest compiled and minified JavaScript -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+</head>
+<body>
+  <div class="container">
+    <div class="page-header">
+      <header class="header-bar position-fixed">
+        <div class="page-logo-navbar position-fixed">
+          <div class="page-logo-left position-fixed">
+            <div class="school-logo-left"></div>
+            <div class="school-logo-main"></div>
+            <div class="school-logo-right"></div>
+          </div>
+          <div class="page-navbar-right position-fixed">
+            <nav class="header-navbar-left">
+              <ul class="header-navbar-list">
+                <li><a href="#" style="margin-left: 0px">General Calendar</a></li>
+                <li><a href="draft_screen4_classnoti.html">Class Calendar</a></li>
+                <li><a href="draft_screen5_todo.html">My To-do List</a></li>
+                <li><a href="#">Direct Message</a></li>
+                <li><a href="#">Threads</a></li>
+                <li><a href="draft_screen1_main.html">Log Out</a></li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+      </header>
+    </div>
+    <div class="page-body">
+      <div class="page-body-left"></div>
+      <div class="page-body-main">
+        <div class="page-calendar">
+          <p>General Calendar</p>
+          <div id="calendar" style="background-color: white; border-radius: 20px;"></div>
+        </div>
+      </div>
+      <div class="page-body-right"></div>
+    </div>
+  </div>
+  <script type="text/javascript">
+    $(document).ready(function() {
+      var $calendar = $("#calendar").fullCalendar({
+        height: 600,
+        textColor: "#990033",
+        header: {
+          left: 'prevYear,prev',
+          center: 'title',
+          right: 'today,month,agendaDay,agendaWeek next,nextYear'
+        },
+        handleWindowResize: true,
+        selectable: true,
+        events: [
+          {
+            title  : 'SUTD - Women In Technology and Design',
+            start  : '2018-01-31',
+            color: "#FF5722",
+            description: 'At SUTD'
+          },
+          {
+            title  : 'event2',
+            start  : '2018-01-23',
+            end    : '2010-01-24',
+            description: 'this is event 2'
+          },
+          {
+            title  : 'event3',
+            start  : '2018-01-20T12:30:00',
+            allDay : false, // will make the time show
+            description: 'this is event 3'
+          },
+
+        ],
+        eventRender: function(event, element) {
+          $(element).tooltip({title: event.title});             
+        }
+      });
+
+    });
+    $('.school-logo-main').click(function(){
+      document.location = 'draft_screen2_noti.html'
+    })
+  </script>
+</body>
+</html>
