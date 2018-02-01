@@ -1,0 +1,530 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>My Project__draft</title>
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="screen5_todo.css">
+    <link href="https://fonts.googleapis.com/css?family=Lato|Roboto+Condensed" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans" rel="stylesheet">
+    <link rel='stylesheet' href='fullcalendar.css' />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src='jquery.min.js'></script>
+    <script src='moment.min.js'></script>
+    <script src='fullcalendar.js'></script>
+    </head>
+  <body>
+    <div class="container">
+      <div class="page-header">
+        <header class="header-bar position-fixed">
+          <div class="page-logo-navbar position-fixed">
+            <div class="page-logo-left position-fixed">
+              <div class="school-logo-left"></div>
+              <div class="school-logo-main"></div>
+              <div class="school-logo-right"></div>
+            </div>
+            <div class="page-navbar-right position-fixed">
+              <nav class="header-navbar-left">
+                <ul class="header-navbar-list">
+                  <li><a href="screen3_gencal.html" style="margin-left: 0px">General Calendar</a></li>
+                  <li><a href="screen4_classnoti.html">Class Calendar</a></li>
+                  <li><a href="#">My To-do List</a></li>
+                  <li><a href="#">Direct Message</a></li>
+                  <li><a href="#">Threads</a></li>
+                  <li><a href="index.html">Log Out</a></li>
+                </ul>
+              </nav>
+            </div>
+          </div>
+        </header>
+      </div>
+      <div class="page-body">
+        <div class="page-body-left todo-on-day">
+          <div class="on-day-container">
+            <div class="on-day-container-offset"></div>
+            <div class="on-day-main">
+              <div class="on-day-box">
+                <div class="on-day-box-date push-from-calendar">
+                  <p>31 January 2018</p>
+                </div>
+                <div class="on-day-box-todo push-from-calendar">
+                  <div class="todo-push">
+                    <div class="todo-push-up">
+                      <p class="todo-priority-1"><i class="fa fa-circle" aria-hidden="true"></i> IMPORTANT</p>
+                      <p class="todo-title-1">Finish ReactJS app</p>
+                      <p class="todo-time-1">No time</p>
+                      <p class="todo-progress-1">70%</p>
+                    </div>
+                    <div class="todo-push-down">
+                      <ul>
+                        <li><button class="todo-mark-pri-1" title="Pin this To-do"><i class="fa fa-thumb-tack" aria-hidden="true"></i></button></li>
+                        <li><button class="todo-alert-1" title="Get alert"><i class="fa fa-exclamation-circle" aria-hidden="true"></i></button></li>
+                        <li><button class="todo-checked-1" title="Mark as done"><i class="fa fa-check" aria-hidden="true"></i></button></li>
+                        <li><button class="todo-delete-1" title="Delete this To-do"><i class="fa fa-trash-o" aria-hidden="true"></i></button></li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="todo-push">
+                    <div class="todo-push-up-2">
+                      <p class="todo-priority-2"><i class="fa fa-circle" aria-hidden="true"></i> IMPORTANT</p>
+                      <p class="todo-title-2">Date with BF</p>
+                      <p class="todo-time-2">20:00</p>
+                      <p class="todo-progress-2">No progress</p>
+                    </div>
+                    <div class="todo-push-down">
+                      <ul>
+                        <li><button class="todo-mark-pri-2" title="Pin this To-do"><i class="fa fa-thumb-tack" aria-hidden="true"></i></button></li>
+                        <li><button class="todo-alert-2" title="Get alert"><i class="fa fa-exclamation-circle" aria-hidden="true"></i></button></li>
+                        <li><button class="todo-checked-2" title="Mark as done"><i class="fa fa-check" aria-hidden="true"></i></button></li>
+                        <li><button class="todo-delete-2" title="Delete this To-do"><i class="fa fa-trash-o" aria-hidden="true"></i></button></li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="page-body-middle todo-main">
+          <div class="page-body-middle-offset">
+            <div class="todo-view-toggle-mode">
+              <button class="toggle-view-order" id="toggle-view-order">My To-do List</button>
+              <button class="toggle-view-calendar" id="toggle-view-calendar">My Calendar</button>
+            </div>
+          </div>
+          <div class="page-body-middle-main">
+            <div class="todo-priority-order-container" id="todo-priority-order-container">
+              <div class="todo-order-main">
+                <div class="todo-order-head">
+                  <select class="todo-select">
+                    <option value="all-select" selected>All To-do</option>
+                    <option value="vvip">Very Important</option>
+                    <option value="vip">Important</option>
+                    <option value="delegable">Delegable</option>
+                    <option value="delayable">Delayable</option>
+                    <option value="unmarked">Unmarked</option>
+                  </select>
+                </div>
+                <div class="todo-order-todo-box vvip todo-push map-in-js" name="vvip">
+                  <div class="todo-push-src" style="width: 100%;">
+                    <p style="color: #D50000"><i class="fa fa-circle" aria-hidden="true"></i> 30 January 2018</p>
+                  </div>
+                  <div class="todo-push-noti" style="width: 100%;">
+                    <p><a href="#" style="text-decoration: none">Party in the U.S.A</a></p>
+                    <p id="time"><a href="#" style="text-decoration: none">20:00</a></p>
+                  </div>
+                </div>
+                <div class="todo-order-todo-box vvip todo-push map-in-js" name="vvip">
+                  <div class="todo-push-src" style="width: 100%;">
+                    <p style="color: #D50000"><i class="fa fa-circle" aria-hidden="true"></i> 31 January 2018</p>
+                  </div>
+                  <div class="todo-push-noti" style="width: 100%;">
+                    <p><a href="#" style="text-decoration: none">AI and Machine Learning seminar</a></p>
+                    <p id="time"><a href="#" style="text-decoration: none" >15:00</a></p>
+                  </div>
+                </div>
+                <div class="todo-order-todo-box vip todo-push map-in-js" name="vip">
+                  <div class="todo-push-src" style="width: 100%;">
+                    <p style="color: #FF5722"><i class="fa fa-circle" aria-hidden="true"></i> 31 January 2018</p>
+                  </div>
+                  <div class="todo-push-noti" style="width: 100%;">
+                    <p><a href="#" style="text-decoration: none">Finish ReactJS app</a></p>
+                    <p id="time"><a href="#" style="text-decoration: none" >No time</a></p>
+                  </div>
+                </div>
+                <div class="todo-order-todo-box vip todo-push map-in-js" name="vip">
+                  <div class="todo-push-src" style="width: 100%;">
+                    <p style="color: #FF5722"><i class="fa fa-circle" aria-hidden="true"></i> 31 January 2018</p>
+                  </div>
+                  <div class="todo-push-noti" style="width: 100%;">
+                    <p><a href="#" style="text-decoration: none">Date with BF</a></p>
+                    <p id="time"><a href="#" style="text-decoration: none">20:00</a></p>
+                  </div>
+                </div>
+                <div class="todo-order-todo-box delegable todo-push map-in-js" name="delegable">
+                  <div class="todo-push-src" style="width: 100%;">
+                    <p style="color: #0D47A1"><i class="fa fa-circle" aria-hidden="true"></i> 30 January 2018</p>
+                  </div>
+                  <div class="todo-push-noti" style="width: 100%;">
+                    <p><a href="#" style="text-decoration: none">Meeting at Dance Club</a></p>
+                    <p id="time"><a href="#" style="text-decoration: none">10:00</a></p>
+                  </div>
+                </div>
+                <div class="todo-order-todo-box delegable todo-push map-in-js" name="delegable">
+                  <div class="todo-push-src" style="width: 100%;">
+                    <p style="color: #0D47A1"><i class="fa fa-circle" aria-hidden="true"></i> 30 January 2018</p>
+                  </div>
+                  <div class="todo-push-noti" style="width: 100%;">
+                    <p><a href="#" style="text-decoration: none">Return books to library</a></p>
+                    <p id="time"><a href="#" style="text-decoration: none" >No time</a></p>
+                  </div>
+                </div>
+                <div class="todo-order-todo-box delayable todo-push map-in-js" name="delayable">
+                  <div class="todo-push-src" style="width: 100%;">
+                    <p style="color: #EC407A"><i class="fa fa-circle" aria-hidden="true"></i> 31 January 2018</p>
+                  </div>
+                  <div class="todo-push-noti" style="width: 100%;">
+                    <p><a href="#" style="text-decoration: none">Wash my car</a></p>
+                    <p id="time"><a href="#" style="text-decoration: none" >No time</a></p>
+                  </div>
+                </div>
+                <div class="todo-order-todo-box delayable todo-push map-in-js" name="delayable">
+                  <div class="todo-push-src" style="width: 100%;">
+                    <p style="color: #EC407A"><i class="fa fa-circle" aria-hidden="true"></i> 31 January 2018</p>
+                  </div>
+                  <div class="todo-push-noti" style="width: 100%;">
+                    <p><a href="#" style="text-decoration: none">Edit the trip photos</a></p>
+                    <p id="time"><a href="#" style="text-decoration: none" >No time</a></p>
+                  </div>
+                </div>
+                <div class="todo-order-todo-box unmarked todo-push map-in-js" name="unmarked">
+                  <div class="todo-push-src" style="width: 100%;">
+                    <p style="color: #9C27B0"><i class="fa fa-circle" aria-hidden="true"></i> 30 January 2018</p>
+                  </div>
+                  <div class="todo-push-noti" style="width: 100%;">
+                    <p><a href="#" style="text-decoration: none">Read 30 pages of the AI book</a></p>
+                    <p id="time"><a href="#" style="text-decoration: none" >No time</a></p>
+                  </div>
+                </div>
+                <div class="todo-order-todo-box unmarked todo-push map-in-js" name="unmarked">
+                  <div class="todo-push-src" style="width: 100%;">
+                    <p style="color: #9C27B0"><i class="fa fa-circle" aria-hidden="true"></i> 31 January 2018</p>
+                  </div>
+                  <div class="todo-push-noti" style="width: 100%;">
+                    <p><a href="#" style="text-decoration: none">Do Calculus homework</a></p>
+                    <p id="time"><a href="#" style="text-decoration: none" >22:00</a></p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="todo-calendar-container" id="todo-calendar-container">
+              <div id="calendar"></div>
+            </div>
+          </div>
+        </div>
+        <div class="page-body-right todo-add">
+          <div class="todo-add-offset"></div>
+          <div class="todo-add-container">
+            <div class="add-form-container">
+              <div class="form-title">
+                <p>Add To-do to calendar</p>
+              </div>
+              <div class="form">
+                <form>
+                  <div class="form-group">
+                    <input type="text" id="form-task" placeholder="To-do Title" class="form-control" required>
+                  </div>
+                  <div class="form-group">
+                    <input type="text" id="form-date-start" placeholder="To-do Date Start YYYY-MM-DD" class="form-control" required>
+                    <input type="text" id="form-date-end" placeholder="To-do Date End YYYY-MM-DD" class="form-control" required>
+                  </div>
+                  <div class="form-group">
+                    <input type="time" id="form-time" placeholder="To-do Time" class="form-control">
+                    <input type="text" id="form-time-no" placeholder="To-do No Time (type No Time)" class="form-control">
+                  </div>
+                  <div class="form-group">
+                    <input type="text" id="form-place" placeholder="To-do Location" class="form-control">
+                  </div>
+                  <div class="form-group">
+                    <select name="Priority" class="form-control" id="form-priority" required>
+                      <option value="vvip">Very Important</option>
+                      <option value="vip">Important</option>
+                      <option value="delegable">Delegable</option>
+                      <option value="delayable">Delayable</option>
+                      <option value="unmarked">Unmarked</option>
+                    </select>
+                  </div>
+                  <div class="form-group">
+                    <input type="number" min="1" max="100" placeholder="To-do Progress" id="form-progress" class="form-control">
+                  </div>
+                  <div class="form-group">
+                    <button class="todo-add-submit">Submit</button>               
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script type="text/javascript">
+    // var events_array = [];
+    // console.log(events_array);
+    // var events = {
+    //   title : $('#form-task').val(),
+    //   start : $('#form-date-start').val(),
+    //   end : $('#form-date-end').val(),
+    //   editable: true,
+    //   time : $('#form-time').val(),
+    //   notime : $('#form-time-no').val(),
+    //   location : $('#form-place').val(),
+    //   priority : $('#form-priority option:selected').val(),
+    //   progress : $('#form-progress').val(),
+    // }
+    // $('.todo-add-submit').click(function(){
+    //   events_array.push(events);
+    //   console.log(events);
+    // })
+    // console.log(events_array);
+    var events_array =[
+    { title: "Paty in the U.S.A",
+      // Set to 1st of the month at 12:00 am
+      start: '2018-01-30T20:00:00',
+      // Set to end the 1st of the month at 3:00 am
+      end: '2018-01-30T23:59:00',
+      color: "#D50000"
+    }, {
+      title: "AI and Machine Learning seminar",
+      // Set to start the 1st of the month
+      start: '2018-01-31T15:00:00',
+      // Set to end one week after the start of the month
+      end: '2018-01-31',
+      color: "#D50000",
+    },{
+      title: "Finish ReactJS app",
+      // Set to start the 1st of the month
+      start: '2018-01-31',
+      // Set to end one week after the start of the month
+      end: '2018-01-31',
+      color: "#FF5722",
+      allDay: true
+    },{
+      title: "Date with BF",
+      // Set to start the 1st of the month
+      start: '2018-01-31T20:00:00',
+      // Set to end one week after the start of the month
+      end: '2018-01-31',
+      color: "#FF5722",
+    },{
+      title: "Meeting at Dance Club",
+      // Set to start the 1st of the month
+      start: '2018-01-30T10:00:00',
+      // Set to end one week after the start of the month
+      end: '2018-01-30',
+      color: "#0D47A1",
+    },{
+      title: "Return books to library",
+      // Set to start the 1st of the month
+      start: '2018-01-30',
+      // Set to end one week after the start of the month
+      end: '2018-01-30',
+      color: "#0D47A1",
+    },{
+      title: "Wash my car",
+      // Set to start the 1st of the month
+      start: '2018-01-31',
+      // Set to end one week after the start of the month
+      
+      color: "#EC407A",
+      allDay: true
+    },{
+      title: "Edit the trip photos",
+      // Set to start the 1st of the month
+      start: '2018-01-31',
+      // Set to end one week after the start of the month
+      
+      color: "#EC407A",
+      allDay: true
+    },{
+      title: "Read 30 pages of the AI book",
+      // Set to start the 1st of the month
+      start: '2018-01-30',
+      // Set to end one week after the start of the month
+      
+      color: "#9C27B0",
+      allDay: true
+    },{
+      title: "Do Calculus homework",
+      // Set to start the 1st of the month
+      start: '2018-01-31T22:00:00',
+      // Set to end one week after the start of the month
+      
+      color: "#9C27B0",
+    },
+    ]
+    var $calendar = $("#calendar").fullCalendar({
+      textColor: "#990033",
+      height: 500,
+      header: {
+        left: 'prevYear,prev',
+        center: 'title',
+        right: 'today,month,agendaDay,agendaWeek next,nextYear'
+      },
+      events: events_array,
+      eventLimit: true, // for all non-agenda views
+      views: {
+        basicDay: {
+            eventLimit: 3 // adjust to 3 only for agendaWeek/agendaDay
+        }
+      },
+      handleWindowResize: true,
+      selectable: true,
+    });
+    $('.school-logo-main').click(function(){
+      document.location = 'draft_screen2_noti.html'
+    }) 
+    $('.toggle-view-order').click(function(){
+      document.getElementById('todo-priority-order-container').style.display='block';
+      document.getElementById('todo-calendar-container').style.display='none';
+    });
+    $('.toggle-view-calendar').click(function(){
+      document.getElementById('todo-priority-order-container').style.display='none';
+      document.getElementById('todo-calendar-container').style.display='block';
+    })
+    $('.todo-select').change(function(){
+
+      if ($(this).val() === 'vvip'){
+        var vip = document.getElementsByClassName("vip");
+        var i;
+        for (i = 0; i < vip.length; i++) {
+          vip[i].style.display = "none";
+        }
+        var delegable = document.getElementsByClassName("delegable");
+        var i;
+        for (i = 0; i < delegable.length; i++) {
+          delegable[i].style.display = "none";
+        }
+        var delayable = document.getElementsByClassName("delayable");
+        var i;
+        for (i = 0; i < delayable.length; i++) {
+          delayable[i].style.display = "none";
+        }
+        var unmarked = document.getElementsByClassName("unmarked");
+        var i;
+        for (i = 0; i < unmarked.length; i++) {
+          unmarked[i].style.display = "none";
+        }
+      } else if ($(this).val() === 'vip'){
+        var vvip = document.getElementsByClassName("vvip");
+        var i;
+        for (i = 0; i < vvip.length; i++) {
+          vvip[i].style.display = "none";
+        }
+        var delegable = document.getElementsByClassName("delegable");
+        var i;
+        for (i = 0; i < delegable.length; i++) {
+          delegable[i].style.display = "none";
+        }
+        var delayable = document.getElementsByClassName("delayable");
+        var i;
+        for (i = 0; i < delayable.length; i++) {
+          delayable[i].style.display = "none";
+        }
+        var unmarked = document.getElementsByClassName("unmarked");
+        var i;
+        for (i = 0; i < unmarked.length; i++) {
+          unmarked[i].style.display = "none";
+        }
+        var vip = document.getElementsByClassName('vip');
+        var i;
+        for (i=0; i<vip.length; i++){
+          vip[i].style.display = 'block';
+        }
+      } else if ($(this).val() === 'delegable'){
+        var vvip = document.getElementsByClassName("vvip");
+        var i;
+        for (i = 0; i < vvip.length; i++) {
+          vvip[i].style.display = "none";
+        }
+        var delegable = document.getElementsByClassName("delegable");
+        var i;
+        for (i = 0; i < delegable.length; i++) {
+          delegable[i].style.display = "block";
+        }
+        var delayable = document.getElementsByClassName("delayable");
+        var i;
+        for (i = 0; i < delayable.length; i++) {
+          delayable[i].style.display = "none";
+        }
+        var unmarked = document.getElementsByClassName("unmarked");
+        var i;
+        for (i = 0; i < unmarked.length; i++) {
+          unmarked[i].style.display = "none";
+        }
+        var vip = document.getElementsByClassName('vip');
+        var i;
+        for (i=0; i<vip.length; i++){
+          vip[i].style.display = 'none';
+        }
+      } else if($(this).val() === 'delayable'){
+        var vvip = document.getElementsByClassName("vvip");
+        var i;
+        for (i = 0; i < vvip.length; i++) {
+          vvip[i].style.display = "none";
+        }
+        var delegable = document.getElementsByClassName("delegable");
+        var i;
+        for (i = 0; i < delegable.length; i++) {
+          delegable[i].style.display = "none";
+        }
+        var delayable = document.getElementsByClassName("delayable");
+        var i;
+        for (i = 0; i < delayable.length; i++) {
+          delayable[i].style.display = "block";
+        }
+        var unmarked = document.getElementsByClassName("unmarked");
+        var i;
+        for (i = 0; i < unmarked.length; i++) {
+          unmarked[i].style.display = "none";
+        }
+        var vip = document.getElementsByClassName('vip');
+        var i;
+        for (i=0; i<vip.length; i++){
+          vip[i].style.display = 'none';
+        }
+      } else if ($(this).val() === 'unmarked'){
+        var vvip = document.getElementsByClassName("vvip");
+        var i;
+        for (i = 0; i < vvip.length; i++) {
+          vvip[i].style.display = "none";
+        }
+        var delegable = document.getElementsByClassName("delegable");
+        var i;
+        for (i = 0; i < delegable.length; i++) {
+          delegable[i].style.display = "none";
+        }
+        var delayable = document.getElementsByClassName("delayable");
+        var i;
+        for (i = 0; i < delayable.length; i++) {
+          delayable[i].style.display = "none";
+        }
+        var unmarked = document.getElementsByClassName("unmarked");
+        var i;
+        for (i = 0; i < unmarked.length; i++) {
+          unmarked[i].style.display = "block";
+        }
+        var vip = document.getElementsByClassName('vip');
+        var i;
+        for (i=0; i<vip.length; i++){
+          vip[i].style.display = 'none';
+        }
+      } else {
+        var vvip = document.getElementsByClassName("vvip");
+        var i;
+        for (i = 0; i < vvip.length; i++) {
+          vvip[i].style.display = "block";
+        }
+        var delegable = document.getElementsByClassName("delegable");
+        var i;
+        for (i = 0; i < delegable.length; i++) {
+          delegable[i].style.display = "block";
+        }
+        var delayable = document.getElementsByClassName("delayable");
+        var i;
+        for (i = 0; i < delayable.length; i++) {
+          delayable[i].style.display = "block";
+        }
+        var unmarked = document.getElementsByClassName("unmarked");
+        var i;
+        for (i = 0; i < unmarked.length; i++) {
+          unmarked[i].style.display = "block";
+        }
+        var vip = document.getElementsByClassName('vip');
+        var i;
+        for (i=0; i<vip.length; i++){
+          vip[i].style.display = 'block';
+        }
+      }
+    })
+</script>
+  </body>
+</html>
