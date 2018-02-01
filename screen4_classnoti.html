@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>My Project__draft</title>
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="screen4_classnoti.css">
+    <link href="https://fonts.googleapis.com/css?family=Lato|Roboto+Condensed" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans" rel="stylesheet">
+    <link rel='stylesheet' href='./fullcalendar/fullcalendar.css' />
+    <script src='./fullcalendar/lib/jquery.min.js'></script>
+    <script src='./fullcalendar/lib/moment.min.js'></script>
+    <script src='./fullcalendar/fullcalendar.js'></script>
+    </head>
+  <body>
+    <div class="container">
+      <div class="page-header">
+        <header class="header-bar position-fixed">
+          <div class="page-logo-navbar position-fixed">
+            <div class="page-logo-left position-fixed">
+              <div class="school-logo-left"></div>
+              <div class="school-logo-main"></div>
+              <div class="school-logo-right"></div>
+            </div>
+            <div class="page-navbar-right position-fixed">
+              <nav class="header-navbar-left">
+                <ul class="header-navbar-list">
+                  <li><a href="screen3_gencal.html" style="margin-left: 0px">General Calendar</a></li>
+                  <li><a href="#">Class Calendar</a></li>
+                  <li><a href="screen5_todo.html">My To-do List</a></li>
+                  <li><a href="#">Direct Message</a></li>
+                  <li><a href="#">Threads</a></li>
+                  <li><a href="screen1_main.html">Log Out</a></li>
+                </ul>
+              </nav>
+            </div>
+          </div>
+        </header>
+      </div>
+      <div class="page-body">
+        <div class="page-body-left class-search-list">
+          <div class="class-search-list-container">
+            <div class="class-search">
+              <div class="search-box">
+                <div class="search-box-input">
+                  <input type="text" placeholder="Search class name, class key,..." id="search-class-input" size="25" style="font-size: 13px" />
+                </div>
+                <div class="search-box-action">
+                  <button><i class="fa fa-search" aria-hidden="true"></i></button>
+                </div>
+              </div>
+            </div>
+            <div class="class-list">
+              <div class="ay-sem-push">
+                <div class="ay-sem-title">
+                  <p class="ay-title">ACADEMIC YEAR 2017 - 2018</p>
+                  <p class="sem-title">SEMESTER 2</p>
+                </div>
+                <div class="ay-sem-class-container">
+                  <div class="ay-sem-class-push">
+                    <p><a href="#"><i>Calculus I (class key)</i></a></p> 
+                  </div>
+                  <div class="ay-sem-class-push">
+                    <p><a href="#"><i>Calculus I (class key)</i></a></p>
+                  </div>
+                  <div class="ay-sem-class-push" id="show-on-allclasses">
+                    <p><a href="#"><i>Calculus I (class key)</i></a></p>
+                  </div>
+                  <div class="ay-sem-class-push" id="show-on-allclasses">
+                    <p><a href="#"><i>Calculus I (class key)</i></a></p>
+                  </div>
+                  <div class="ay-sem-class-allclasses">
+                    <p class="show-allclasses"><a href="#" id="show-hide-toggle">All classes</a></p>
+                  </div>
+                </div>
+              </div>
+              <div class="ay-sem-push">
+                <div class="ay-sem-title">
+                  <p class="ay-title">ACADEMIC YEAR 2017 - 2018</p>
+                  <p class="sem-title">SEMESTER 1</p>
+                </div>
+                <div class="ay-sem-class-container">
+                  <div class="ay-sem-class-push">
+                    <p><a href="#"><i>Calculus I (class key)</i></a></p>
+                  </div>
+                  <div class="ay-sem-class-push">
+                    <p><a href="#"><i>Calculus I (class key)</i></a></p>
+                  </div>
+                </div>
+              </div>
+              <div class="ay-sem-push">
+                <div class="ay-sem-title">
+                  <p class="ay-title">ACADEMIC YEAR 2016 - 2017</p>
+                  <p class="sem-title">SEMESTER 2</p>
+                </div>
+                <div class="ay-sem-class-container">
+                  <div class="ay-sem-class-push">
+                    <p><a href="#"><i>Calculus I (class key)</i></a></p>
+                  </div>
+                  <div class="ay-sem-class-push">
+                    <p><a href="#"><i>Calculus I (class key)</i></a></p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="page-body-middle class-notifications">
+          <div class="page-body-middle-offset"></div>
+          <div class="page-body-middle-main">
+            <div class="class-notifications-toggle-mode">
+              <div class="toggle-mode-container">
+                <button class="toggle-view-noti">Notifications</button>
+                <button class="toggle-view-calendar">Calendar</button>
+              </div>
+            </div>
+            <div class="class-notifications-container" id="class-notifications-container">
+              <div class="class-notifications-main">
+                <div class="noti-dashboard-head"></div>
+                <div class="noti-dashboard-noti-box noti-push map-in-js">
+                  <div class="noti-push-src" style="width: 100%;">
+                    <p><i class="fa fa-circle" aria-hidden="true"></i> Calculus I</p>
+                  </div>
+                  <div class="noti-push-noti" style="width: 100%;">
+                    <p><a href="#" style="text-decoration: none; color: #990033">Homework updated | 31 January 2018</a></p>
+                  </div>
+                </div>
+                <div class="noti-dashboard-noti-box noti-push map-in-js">
+                  <div class="noti-push-src" style="width: 100%;">
+                    <p><i class="fa fa-circle" aria-hidden="true"></i> Calculus I</p>
+                  </div>
+                  <div class="noti-push-noti" style="width: 100%;">
+                    <p><a href="#" style="text-decoration: none; color: #990033">Class off | 31 January 2018</a></p>
+                  </div>
+                </div>
+                <div class="noti-dashboard-noti-box noti-push map-in-js">
+                  <div class="noti-push-src" style="width: 100%;">
+                    <p><i class="fa fa-circle" aria-hidden="true"></i> Calculus I</p>
+                  </div>
+                  <div class="noti-push-noti" style="width: 100%;">
+                    <p><a href="#" style="text-decoration: none; color: #990033">Finals revision materials</a></p>
+                  </div>
+                </div>
+                <div class="noti-dashboard-noti-box noti-push map-in-js">
+                  <div class="noti-push-src" style="width: 100%;">
+                    <p><i class="fa fa-circle" aria-hidden="true"></i> Calculus I</p>
+                  </div>
+                  <div class="noti-push-noti" style="width: 100%;">
+                    <p><a href="#" style="text-decoration: none; color: #990033">Class registration successful</a></p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="class-calendar-container" id="class-calendar-container">
+              <div id="calendar"></div>
+            </div>
+          </div>
+        </div>
+        <div class="page-body-right class-register">
+          <div class="class-register-offset"></div>
+          <div class="class-register-container">
+            <div class="register-form-container">
+              <div class="form-title">
+                <p>Add Class to calendar</p>
+              </div>
+              <div class="form">
+                <form>
+                  <div class="form-group">
+                    <input type="text" id="form-studentid" placeholder="Student ID Number" class="form-control" required>
+                  </div>
+                  <div class="form-group">
+                    <input type="text" id="form-classkey" placeholder="Class Key" class="form-control" required>
+                  </div>
+                  <div class="form-group">
+                    <select name="Semester" class="form-control" required>
+                      <option value="" selected disabled hidden>Semester</option>
+                      <option value="one">1</option>
+                      <option value="two">2</option>
+                    </select>
+                  </div>
+                  <div class="form-group">
+                    <select name="Academic Year" class="form-control" required>
+                      <option value="" selected disabled hidden>Academic Year</option>
+                      <option value="1617">2016 - 2017</option>
+                      <option value="1718">2017 - 2018</option>
+                    </select>
+                  </div>
+                  <div class="form-group">
+                    <button class="class-register-submit">Submit</button>               
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script type="text/javascript">
+    $(document).ready(function() {
+      var $calendar = $("#calendar").fullCalendar({
+        textColor: "#990033",
+        height: 500,
+        header: {
+          left: 'prevYear,prev',
+          center: 'title',
+          right: 'today,month,agendaDay,agendaWeek next,nextYear'
+        },
+        handleWindowResize: true,
+        selectable: true,
+      });
+    });
+    $('.school-logo-main').click(function(){
+      document.location = 'draft_screen2_noti.html'
+    })
+    $('.show-allclasses').click(function(){
+      document.getElementById('show-on-allclasses').style.display = 'block';
+      $('#show-hide-toggle').html("Hide classes");
+      $(this).toggleClass('hide-allclasses');
+      $('.hide-allclasses').click(function(){
+        document.getElementById('show-on-allclasses').style.display = 'none';
+        $('#show-hide-toggle').html("All classes");
+        $(this).removeClass('hide-allclasses');
+        $(this).toggleClass('show-allclasses');
+      }) 
+    }) 
+    $('.toggle-view-noti').click(function(){
+      document.getElementById('class-notifications-container').style.display= 'block';
+      document.getElementById('class-calendar-container').style.display = 'none';
+    })
+    $('.toggle-view-calendar').click(function(){
+      document.getElementById('class-notifications-container').style.display= 'none';
+      document.getElementById('class-calendar-container').style.display = 'block';
+    })
+    
+  </script>
+  </body>
+</html>

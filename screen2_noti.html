@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>My Project__draft</title>
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="screen2_noti.css">
+    <link href="https://fonts.googleapis.com/css?family=Lato|Roboto+Condensed" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans" rel="stylesheet">
+  </head>
+  <body>
+    <div class="container">
+      <div class="page-header">
+        <header class="header-bar position-fixed">
+          <div class="page-logo-navbar position-fixed">
+            <div class="page-logo-left position-fixed">
+              <div class="school-logo-left"></div>
+              <div class="school-logo-main"></div>
+              <div class="school-logo-right"></div>
+            </div>
+            <div class="page-navbar-right position-fixed">
+              <nav class="header-navbar-left">
+                <ul class="header-navbar-list">
+                  <li><a href="screen3_gencal.html" style="margin-left: 0px">General Calendar</a></li>
+                  <li><a href="screen4_classnoti.html">Class Calendar</a></li>
+                  <li><a href="screen5_todo.html">My To-do List</a></li>
+                  <li><a href="#">Direct Message</a></li>
+                  <li><a href="#">Threads</a></li>
+                  <li><a href="screen1_main.html">Log Out</a></li>
+                </ul>
+              </nav>
+            </div>
+          </div>
+        </header>
+      </div>
+      <div class="page-body">
+        <div class="page-body-left student-info">
+          <div class="student-info-profpic">
+            <div class="student-profpic-left"></div>
+            <div class="student-profpic">
+              <div class="student-profpic-offset-up"></div>
+              <div class="student-profpic-square">
+              </div>
+            </div>
+            <div class="student-profpic-right"></div>
+          </div>
+          <div class="student-info-name">
+            <p class="student-name">Student Name</p>
+          </div>
+          <div class="student-info-username">
+            <p class="student-username">@studentname</p>
+          </div>
+          <div class="student-info-idno">
+            <p class="student-id">Student ID Number: 123456789</p>
+          </div>
+          <div class="student-info-email">
+            <p class="student-email">Email: student.name@gmail.com</p>
+          </div>
+          <div class="student-info-major">
+            <p class="student-major">Information Systems Technology and Design (ISTD)</p>
+          </div>
+        </div>
+        <div class="page-body-middle main-notifications">
+          <div class="popup-noti-alert main-notifications-up">
+            <div class="popup-noti-alert-left popup-main">
+              <div class="popup-main-up noti-alert">
+                <p class="noti-alert-priority" style="margin-top: 1em; margin-left: 5%; color: #990033"><i class="fa fa-circle" aria-hidden="true" style="color: #990033"></i> IMPORTANT</p>
+                <p class="noti-alert-main" style="margin-left: 10%">You have 01 event on: </p>
+                <p class="noti-alert-time" style="margin-left: 15%"> 31 January 2018</p>
+                <p class="noti-alert-event" style="margin-left: 15%">SUTD - Women In Technology and Design</p>
+              </div>
+              <div class="popup-main-down action-alert">
+                <button class="action-alert-gotopage"><a href="screen3_gencal.html" style="text-decoration: none; color: black">Go to page</a></button>
+                <button class="action-alert-share">Share in Direct Message</button>
+              </div>
+            </div>
+            <div class="popup-noti-alert-right popup-close">
+              <button class="close-action"><i class="fa fa-times" aria-hidden="true"></i></button>
+            </div>
+          </div> 
+          <div class="noti-dashboard main-notifications-down">
+            <div class="noti-dashboard-noti-filter">
+              <div class="noti-filter">
+                <div class="noti-filter-wrap">
+                  <i class="fa fa-filter" aria-hidden="true" style="font-size: larger; color: #990033; margin-right: 5px"></i>
+                  <select id="noti-filter">
+                    <option value="all-noti">All notifications</option>
+                    <option value="gen-cal">General Calendar</option>
+                    <option value="class-cal">Class Calendar</option>
+                    <option value="todo">My To-do List</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+            <div class="noti-dashboard-noti-box noti-push map-in-js" id="gencal">
+              <div class="noti-push-src" style="width: 100%;">
+                <p style="margin: 0px; color: #f58322; margin-left: 5%"><i class="fa fa-circle" aria-hidden="true"></i> General Calendar</p>
+              </div>
+              <div class="noti-push-noti" style="width: 100%;">
+                <p style="margin: 0; margin-left: 15%"><a href="#" style="text-decoration: none; color: #990033">SUTD - Women In Technology and Design | 31 January 2018</a></p>
+              </div>
+            </div>
+            <div class="noti-dashboard-noti-box noti-push map-in-js" id="classcal">
+              <div class="noti-push-src" style="width: 100%;">
+                <p style="margin: 0px; color: #00b1c0; margin-left: 5%"><i class="fa fa-circle" aria-hidden="true"></i> Class Calendar</p>
+              </div>
+              <div class="noti-push-noti" style="width: 100%;">
+                <p style="margin: 0; margin-left: 10%"><a href="#" style="text-decoration: none; color: black">Calculus I</a></p>
+                <p style="margin: 0; margin-left: 15%"><a href="#" style="text-decoration: none; color: #990033">Homework updated | 31 January 2018</a></p>
+              </div>
+            </div>
+            <div class="noti-dashboard-noti-box noti-push map-in-js" id="my-todo">
+              <div class="noti-push-src" style="width: 100%;">
+                <p style="margin: 0px; color: #9C27B0; margin-left: 5%"><i class="fa fa-circle" aria-hidden="true"></i> My To-do List</p>
+              </div>
+              <div class="noti-push-noti" style="width: 100%;">
+                <div class="noti-push-left">
+                  <p style="margin: 0; margin-left: 30%"><a href="#" style="text-decoration: none; color: #990033">Finish ReactJS app</a></p>
+                </div>
+                <div class="noti-push-right">
+                  <div class="noti-push-progress">
+                    <div class="noti-push-progress-filled"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="page-body-right general-news">
+          <div class="general-news-header">
+            <div class="news-header-left">
+              <div class="news-header-header">
+                <p><a href="#" style="text-decoration: none; color: white">News</a></p>
+              </div>
+            </div>
+            <div class="news-header-right">
+              <p><a href="#" style="text-decoration: none; color: white">All news ></a></p>
+            </div>
+          </div>
+          <div class="general-news-list">
+            <div class="news-title">
+              <a href="https://www.gov.sg/news/content/channel-newsasia---govt-moots-select-committee-to-study-deliberate-online-falsehoods">Govt moots Select Committee to study...</a>
+              <p class="news-time"><i class="fa fa-clock-o" aria-hidden="true"></i> 06 JAN 2018</p>
+            </div>
+            <div class="news-title">
+              <a href="https://www.asianscientist.com/2018/01/academia/maths-science-curiosity-research-innovation/">Please Mind The (Curiosity) Gap</a>
+              <p class="news-time"><i class="fa fa-clock-o" aria-hidden="true"></i> 05 JAN 2018</p>
+            </div>
+            <div class="news-title">
+              <a href="http://www.straitstimes.com/singapore/committee-of-mps-to-mull-over-issue-of-online-falsehoods-to-be-established-minlaw">Committee of MPs to consider online falsehoods</a>
+              <p class="news-time"><i class="fa fa-clock-o" aria-hidden="true"></i> 05 JAN 2018</p>
+            </div>
+            <div class="news-title">
+              <a href="https://www.channelnewsasia.com/news/singapore/faq-what-are-organised-misinformation-campaigns-and-why-should-9836052">FAQ: What are organised misinformation campaigns,...</a>
+              <p class="news-time"><i class="fa fa-clock-o" aria-hidden="true"></i> 05 JAN 2018</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script type="text/javascript">
+      $('.close-action').click(function(){
+        $('.popup-noti-alert').animate({
+          height: 'toggle'
+        });
+        $('.noti-dashboard').css("margin-top", "50px");
+      })
+      $('#noti-filter').change(function(){ 
+        if($(this).val() === 'gen-cal'){
+          document.getElementById('classcal').style.display = 'none';
+          document.getElementById('my-todo').style.display = 'none';
+        } 
+        else if($(this).val() === 'class-cal'){
+          document.getElementById('my-todo').style.display = 'none';
+          document.getElementById('gencal').style.display = 'none';
+          document.getElementById('classcal').style.display = 'block';
+        }
+        else if ($(this).val() === 'todo'){
+          document.getElementById('my-todo').style.display = 'block';
+          document.getElementById('gencal').style.display = 'none';
+          document.getElementById('classcal').style.display = 'none';
+        }
+        else {
+          document.getElementById('my-todo').style.display = 'block';
+          document.getElementById('gencal').style.display = 'block';
+          document.getElementById('classcal').style.display = 'block';
+        }
+
+      });
+    </script>
+  </body>
+</html> 

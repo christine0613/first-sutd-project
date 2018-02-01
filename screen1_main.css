@@ -1,0 +1,176 @@
+.container{
+	background: #990033;
+	background-color: #990033;
+	height: 650px;
+}
+.header-bar{
+  width: 100%;
+  height: 80px;
+  background: #990033;
+}
+.page-logo-navbar{
+  width: 100%;
+  height: 100%;
+  border-bottom: 1px solid white;
+
+}
+.page-logo-left{
+  height: 100%;
+  width: 30%;
+  display: inline-block;
+  float: left;
+}
+.school-logo-left{
+  width: 52%;
+  height: 100%;
+  display: inline-block;
+}
+.school-logo-main{
+  display: inline-block;
+  height: 100%;
+  width: 35%;
+  background-image: url("sutd-logo_1.png");
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+
+}
+.school-logo-right{
+  display: inline-block;
+  height: 100%;
+  width: 10%;  
+}
+.page-navbar-right{
+  display: inline-block;
+  width: 70%;
+  height: 100%;
+  float: right;
+}
+.header-navbar-left{
+  width: 90%;
+  display: inline-block;
+}
+.header-navbar-list{
+  padding: 0px;
+  padding-top: 30px;
+}
+.header-navbar-list li{
+  display: inline-block;
+}
+.header-navbar-list a{
+  text-decoration: none;
+  padding: 7px 10px;
+  margin-left: 10px;
+  color: white;
+  font-family: "Lato";
+}
+.header-navbar-list a:hover{
+  background-color: white;
+  border-radius: 10px;
+  height: 100px;
+  color: #990033;
+}
+.page-body{
+	margin-top: 50px;
+	display: grid;
+	grid-template-areas: "toggle-box-offset-left toggle-box toggle-box-offset-right";
+	grid-template-columns: 1fr 2fr 1fr;
+}
+.toggle-box{
+	border: 1px solid #990033;
+	border-radius: 10px;
+	background-color: white;
+	box-shadow: 1px 5px 20px 1px rgba(236,64,122,1);
+}
+.toggle-box-toggle-bar{
+	width: 100%;
+	height: 80px;
+	border-bottom: 3px solid #990033;
+}
+.toggle-box-toggle-bar-register{
+	width: 49.5%;
+	height: 80px;
+	display: inline-block;
+	border-right: 3px solid #990033;
+	cursor: pointer;
+}
+.toggle-box-toggle-bar-register span{
+	text-align: center;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-top: 20px;
+	color: #990033;
+	font-family: "Fjalla One";
+	font-weight: 900px;
+	font-size: 40px;
+}
+.submit-button input{
+	width: 20%;
+	height: 30px;
+	border-radius: 10px;
+	background-color: white;
+	border: 1px solid #00E676;
+	color: #00E676;
+	font-family: "Roboto";
+	font-weight: bold;
+	cursor: pointer;
+	margin-left: 83%;
+}
+.toggle-box-toggle-bar-signin{
+	width: 49%;
+	height: 80px;
+	display: inline-block;
+	cursor: pointer;
+}
+.toggle-box-toggle-bar-signin span{
+	text-align: center;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-top: 20px;
+	color: #990033;
+	font-family: "Fjalla One";
+	font-size: 40px;
+	font-weight: 900px;
+}
+.signin-action input{
+	width: 20%;
+	height: 30px;
+	border-radius: 10px;
+	background-color: white;
+	border: 1px solid #00E676;
+	color: #00E676;
+	font-family: "Roboto";
+	font-weight: bold;
+	cursor: pointer;
+	margin-left: 83%;
+}
+.form-group{
+	padding: 20px;
+	width: 90%;
+	height: 30px;
+}
+.field-input{
+	height: 30px;
+	display: inline-block;
+	margin-left: 30px;
+}
+.field-input input{
+	border-top: none;
+	border-left: none;
+	border-right: none;
+	border-bottom: 1px solid #990033;
+	border-radius: 5px;
+	box-shadow: 1px 2px #990033;
+	height: 30px;
+}
+::-webkit-input-placeholder {
+	color: #990033;
+	opacity: 0.65;
+	font-family: "Source Sans Pro";
+	font-weight: bold;
+}
+.register-info{
+	display: none;
+}

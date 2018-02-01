@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>My Project__draft</title>
+	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link href="https://fonts.googleapis.com/css?family=Fjalla+One|Roboto|Roboto+Condensed|Source+Sans+Pro" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Lato|Roboto+Condensed" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="screen1_main.css">
+</head>
+<body>
+	<div class="container">
+		<div class="page-header">
+			<header class="header-bar position-fixed">
+          		<div class="page-logo-navbar position-fixed">
+            	<div class="page-logo-left position-fixed">
+              		<div class="school-logo-left"></div>
+              		<div class="school-logo-main"></div>
+              		<div class="school-logo-right"></div>
+            	</div>
+            	<div class="page-navbar-right position-fixed">
+              		<nav class="header-navbar-left">
+                		<ul class="header-navbar-list">
+                  			<li><a href="#" style="margin-left: 0px">General Calendar</a></li>
+                  			<li><a href="#">Class Calendar</a></li>
+                  			<li><a href="#">My To-do List</a></li>
+                  			<li><a href="#">Direct Message</a></li>
+                  			<li><a href="#">Threads</a></li>
+                  			<li><a href="#">Log Out</a></li>
+                		</ul>
+              		</nav>
+            	</div>
+          	</div>
+        </header>
+		</div>
+		<div class="page-body">
+			<div class="toggle-box-offset-left"></div>
+			<div class="toggle-box register-signin">
+				<div class="toggle-box-toggle-bar">
+					<div class="toggle-box-toggle-bar-register" key="tgl-register">
+						<span>SIGN UP</span>
+					</div>
+					<div class="toggle-box-toggle-bar-signin" key="tgl-signin">
+						<span>SIGN IN</span>
+					</div>
+				</div>
+				<div class="toggle-box-body">
+					<div class="form register-info" id="register-info">
+						<form>
+							<div class="form-group">
+								<div class="field-input">
+									<input type="text" class="form-control" ref="reg-info-name" placeholder="STUDENT NAME" id="reg-info-name" size="80" required />
+								</div>	
+							</div>
+							<div class="form-group">	
+								<div class="field-input">
+									<input type="text" class="form-control" ref="reg-info-id" placeholder="STUDENT ID NUMBER" size="80" id="reg-info-id" required />
+								</div>	
+							</div>
+							<div class="form-group">	
+								<div class="field-input">
+									<input type="email" class="form-control" ref="reg-info-email" placeholder="STUDENT EMAIL" size="80" id="reg-info-email" required />
+								</div>	
+							</div>
+							<div class="form-group submit-button">
+								<input type="submit" value="SUBMIT" />
+							</div>
+						</form>
+					</div>
+				</div>
+				<div class="form signin-info" id="signin-info">
+					<form>
+						<div class="form-group">
+							<div class="field-input">	
+								<input type="text" class="form-control" ref="signin-id" placeholder="STUDENT ID NUMBER" size="80" id="signin-id" required />
+							</div>	
+						</div>
+						<div class="form-group">
+							<div class="field-input">	
+								<input type="password" class="form-control" placeholder="PASSWORD" ref="signin-password" size="80" id="signin-password" required />
+							</div>	
+						</div>
+						<div class="form-group signin-action">
+							<input type="button" value="SIGN IN" class="signin-button" />
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+		<div class="toggle-box-offset-right"></div>
+	</div>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script type="text/javascript">
+    	let password = "pass2daw0rd";
+    	$('.toggle-box-toggle-bar-register').click(function(){
+    		document.getElementById('register-info').style.display = "block";
+			document.getElementById('signin-info').style.display = "none";
+    	})
+    	$('.toggle-box-toggle-bar-signin').click(function(){
+    		document.getElementById('register-info').style.display = "none";
+			document.getElementById('signin-info').style.display = "block";
+    	})
+    	$('.signin-button').click(function(){
+    		if ($('#signin-id').val() == '') {
+    			alert("Please fill in your Student ID Number")
+    		} else if($('#signin-password').val() == ''){
+    			alert("Please fill in your Password")
+    		} else if($('#signin-password').val() !== password){
+    				alert("Invalid password. Try again!")
+    		};
+    		if($('#signin-password').val() == password){
+    			document.location = 'screen2_noti.html'
+    		};
+  		})
+    </script>
+</body>
+</html>

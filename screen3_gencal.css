@@ -1,0 +1,96 @@
+.container{
+  font-family: "Noto Sans";
+  height: 750px;
+  background-color: #990033;
+  background: #990033;
+}
+.header-bar{
+  width: 100%;
+  height: 80px;
+  background: #990033;
+  border-bottom: 1px solid white;
+}
+.page-logo-navbar{
+  width: 100%;
+  height: 100%;
+}
+.page-logo-left{
+  height: 100%;
+  width: 30%;
+  display: inline-block;
+  float: left;
+}
+.school-logo-left{
+  width: 52%;
+  height: 100%;
+  display: inline-block;
+}
+.school-logo-main{
+  display: inline-block;
+  height: 100%;
+  width: 35%;
+  background-image: url("sutd-logo_1.png");
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  cursor: pointer;
+
+}
+.school-logo-right{
+  display: inline-block;
+  height: 100%;
+  width: 10%;  
+}
+.page-navbar-right{
+  display: inline-block;
+  width: 70%;
+  height: 100%;
+  float: right;
+}
+.header-navbar-left{
+  width: 90%;
+  display: inline-block;
+}
+.header-navbar-list{
+  padding: 0px;
+  padding-top: 30px;
+}
+.header-navbar-list li{
+  display: inline-block;
+}
+.header-navbar-list a{
+  text-decoration: none;
+  padding: 7px 10px;
+  margin-left: 10px;
+  color: white;
+}
+.header-navbar-list a:hover{
+  background-color: white;
+  border-radius: 10px;
+  height: 100px;
+  color: #990033;
+}
+.page-body{
+  display: grid;
+  grid-template-areas: "page-body-left page-body-main page-body-right";
+  grid-template-columns: 1fr 4fr 1fr;
+}
+/*.fc-today {
+  background-color: #990033 !important;
+  background: #990033 !important;
+  color: white;
+  font-weight: bold;
+}*/
+#calendar .fc-agenda-axis, #calendar .fc-widget-header{
+  background-color: #00b1c0;
+  border-color: #AED0EA;
+  font-weight: normal;
+  padding: 3px;
+  border-radius: 3px;
+}
+.page-calendar p{
+  color: white;
+  font-size: larger;
+  font-weight: bold;
+  text-align: center;
+}
